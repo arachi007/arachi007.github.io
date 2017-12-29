@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<!--
+Source code của tool mở / không mã hóa sử dụng cho mục đích học tập. Vui lòng không sử dụng với mục đích thương mại.
+Code thuần js, nếu muốn up lên server chỉ cần copy hết source và dán sang file html.
+Template Blogger được chia sẽ trong nhóm VideoAPI.
+Update: 9/8/2017
+-->
+<head>
+<title>Tool Post MV21.ME</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Tool hỗ trợ việc đăng phim trên Template Blogspot phim phát triền bởi Hoàng. Mẫu đăng phim được tạo theo v2."/>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Jquery -->
+  <script src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' type='text/javascript'></script>
+  <script src="https://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="http://fezvrasta.github.io/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+  <link href="//cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+  <link href="http://fezvrasta.github.io/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+  <script src="http://fezvrasta.github.io/bootstrap-material-design/dist/js/material.js"></script>
+	<script src="http://fezvrasta.github.io/bootstrap-material-design/dist/js/ripples.min.js"></script>
+<meta charset='UTF-8'/>
+	
+<style>
+	body{ width: 90%; height: 90%; margin-left:5%; margin-top:30px}
+	#output{width:100%;
+	overflow:hidden;
+	resize: none;
+	}
+	</style>
+
+<script>
+//<![CDATA[
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('f 1W(){$("#1h").15("I","16");6 o=$("#o").2();6 J="j://1i.1j.q/3/1X/";6 K="?1k=1l,D";6 L="&1m=1Y-1Z";6 E="&1n=1o";$.1p(J+o+K+L+E,f(e){$.k(e,f(b,c){9(b=="u"){$("#u").2(c+" ("+e.x.l(0,4)+")");$("#17").r(c+" ("+e.x.l(0,4)+")")}9(b=="18"){$("#18").2(c)}9(b=="1q"){6 M=\'<a 19="j://y.z.q/t/p/A\'+c+\'" 1a="\'+e.u+\'.1r" 1s="1t"><F 1b="j://y.z.q/t/p/A\'+c+\'" 1u="1v" N="1w"></F></a>\';$("#v").2("j://y.z.q/t/p/A"+e.1x);$(".v").r(M)}9(b=="h"){6 h="";$.k(e.h,f(i,g){h+=g.G+\', \'});$("#h").2(h)}9(b=="1c"){6 m="";$.k(e.1c,f(i,g){m+=g.20+\', \'});$("#m").2(m)}9(b=="x"){6 O=["1y","1z","1A","1B","1C","1D","1E","1F","1G","1H","1I","1J"];6 P=c.l(5,7)-1;6 Q=O[P];6 R=c.l(8,10)+\' \'+Q+\' \'+c.l(0,4);$("#x").2(R)}9(b=="1c"){6 B="";$.k(e.D.S,f(i,g){9(i>3)T U;B+=g.G+\', \'});$("#S").2(B)}9(b=="u"){6 C="";$.k(e.1l.1d,f(i,g){9(i=0)T U;C=g.21});$("#V").2("j://1K.1d.W/1L/"+C)}9(b=="1M"){$("#1N").2(c)}9(b=="1O"){$("#1e").2(c)}})})}f 22(){$("#1h").15("I","16");6 o=$("#o").2();6 J="j://1i.1j.q/3/23/";6 K="?1k=1f,D";6 L="&1m=24";6 E="&1n=1o";$.1p(J+o+K+L+E,f(e){$.k(e,f(b,c){9(b=="G"){$("#u").2(c);$("#17").r(c)}9(b=="25"){$("#18").2(c)}9(b=="1q"){6 M=\'<a 19="j://y.z.q/t/p/A\'+c+\'" 1a="\'+e.u+\'.1r" 1s="1t"><F 1b="j://y.z.q/t/p/A\'+c+\'" 1u="1v" N="1w"></F></a>\';$("#v").2("j://y.z.q/t/p/A"+e.1x);$(".v").r(M)}9(b=="h"){6 h="";$.k(e.h,f(i,g){h+=g.G+\', \'});$("#h").2(h)}9(b=="1P"){6 m="";$.k(e.1P,f(i,g){m+=g+\', \'});$("#m").2(m)}9(b=="26"){6 O=["1y","1z","1A","1B","1C","1D","1E","1F","1G","1H","1I","1J"];6 P=c.l(5,7)-1;6 Q=O[P];6 R=c.l(8,10)+\' \'+Q+\' \'+c.l(0,4);$("#x").2(R)}9(b=="D"){6 B="";$.k(e.D.S,f(i,g){9(i>3)T U;B+=g.G+\', \'});$("#S").2(B)}9(b=="1f"){6 C="";$.k(e.1f.27,f(i,g){9(i=0)T U;C=g.E});$("#V").2("j://1K.1d.W/1L/"+C)}9(b=="1M"){$("#1N").2(c)}9(b=="1O"){$("#1e").2(c)}})})}f 28(){$("#29").15("I","16");$("#H").2(\'<d X="2a"><F 1b="\'+$("#v").2()+\'"/></d>\'+\'\\n\'+\'<Y>2b</Y>\'+\'\\n\'+$("#1e").2()+\'\\n\'+\'<Y>2c</Y>\'+\'\\n\'+\'<d Z="2d-2e: 2f;"><a X="1Q 1Q-2g 2h" 19="j://2i.1g.W/2j?s=\'+$("#1g").2()+\'" 2k="2l" 2m="2n">2o 2p <i X="1R 1R-1a"></i> </a> </d> \'+\'\\n\'+\'<d Z="I: 2q;">\'+\'\\n\'+\'<d w="\'+$("#1g").2()+\'" s="2r"></d>\'+\'\\n\'+\'<d w="\'+$("#2s").2()+\'" s="2t"></d>\'+\'\\n\'+\'<d w="\'+$("#1S").2()+\'" s="1S"></d>\'+\'\\n\'+\'<d w="\'+$("#V").2()+\'" s="V"></d>\'+\'\\n\'+\'<d w="j://2u.2v.W/2w/2x/2y/2z.2A" s="2B"></d>\'+\'\\n\'+\'<d X="1" w="" 2C=""></d>\'+\'\\n\'+\'<d 2D="" 2E="" s="2F"></d>\'+\'\\n\'+\'<p s="o" w="\'+$("#o").2()+\'"></p>\'+\'\\n\'+\'</d>\'+\'\\n\');12.13("H").Z.N=(12.13("H").1T)+"1U";$("#1V").r($("#h").2().14(" &",",").14(" &",",").14(" &",",").14(" &",",")+$("#m").2()+$("#x").2().l(7,11))}f 2G(){9(($("#u").2()||$("#v").2()).2H>0){$(\'2I\').2(\'\');$(\'2J\').2(\'\');$(\'#17\').r(\'\');$(\'#1V\').r(\'\');$(\'.v\').r(\'\');12.13("H").Z.N=(12.13("H").1T)+"1U"}2K{2L(\'2M 2N\')}}',62,174,'||val||||var|||if||idnya|value|div|hasil|function|item|genres||https|each|slice|country||imdb||org|html|id||title|poster|data|release_date|image|tmdb|w500|pemain|trailerss|credits|key|img|name|output|display|url|respon|string|pic|height|nambul|bulan|nabul|year|cast|return|false|trailer|com|class|h3|style|||document|getElementById|replace|css|block|judulnya|original_title|href|download|src|production_countries|youtube|synopsis|videos|google|hasilnya|api|themoviedb|append_to_response|trailers|language|api_key|3ab3d30d05909bf2341d51fd240c6570|getJSON|poster_path|jpg|target|_blank|width|180|320|backdrop_path|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|www|embed|vote_average|rating|overview|origin_country|btn|fa|mirror|scrollHeight|px|genrenya|letsgo|movie|en|US|iso_3166_1|source|letsgotv|tv|en_US|original_name|first_air_date|results|generate|manual|separator|Synopsis|Download|text|align|center|info|googledrive|drive|uc|rel|nofollow|role|button|Google|Drive|none|bigframe|openload|second|cdn|rawgit|arachi007|mv21|c2a11a63|default|srt|subjudul|subtitle|akhir|awal|episod|check|length|input|textarea|else|alert|masih|kosong'.split('|'),0,{}))	
+	//]]>
+	</script>	
+</head>
+<body>
+	<div><span>IMDB ID : </span> <input type="text" id="imdb" placeholder="tt1961175 or 415842" /> <button id="getdata" class="btn btn-primary" onclick="letsgo();" type="submit">Movie</button>   <button id="getdata" class="btn btn-info" onclick="letsgotv();" type="submit">Series</button>   <button id="getdata" class="btn btn-warning" onclick="check()" type="submit">Clear Data</button></div>
+    <span>www.imdb.com/title/<b>tt1961175</b> or https://www.themoviedb.org/movie/<b>415842</b>-american-assassin</span>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<table class="table table-striped table-hover table-responsive">
+	<thead>
+		<tr>
+			<th>
+				NAME</th>
+			<th>
+				CONTENT			</th>
+		</tr>
+	</thead>
+	<tbody>
+    <tr>
+			<td>
+				Title			</td>
+			<td><input type="text" id="title" /></td>
+	  </tr>
+		<tr>
+			<td>
+				Original Title			</td>
+			<td>
+				<input type="text" id="original_title" />			</td>
+		</tr>
+		<tr>
+			<td>Poster</td>
+	  <td>
+				<input type="text" id="poster" />			</td>
+		</tr>
+		<tr>
+			<td>Genres</td>
+	  <td>
+				<input type="text" id="genres" />			</td>
+		</tr>
+		<tr>
+			<td>Country</td>
+	  <td>
+				<input type="text" id="country" />			</td>
+		</tr>
+		<tr>
+			<td>Release Date</td>
+	  <td>
+				<input type="text" id="release_date" />			</td>
+		</tr>
+		<tr>
+			<td>Cast</td>
+	  <td>
+				<input type="text" id="cast" />			</td>
+		</tr>
+		<tr>
+			<td>Trailer</td>
+	  <td>
+				<input type="text" id="trailer" />			</td>
+		</tr>
+		<tr>
+			<td>Rating</td>
+	  <td>
+				<input type="text" id="rating" />			</td>
+		</tr>
+        <tr>
+			<td>Synopsis</td>
+	  <td>
+				<input type="text" id="synopsis" />			</td>
+		</tr>
+
+        <</tbody></table></div> <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <table class="table table-striped table-hover table-responsive">
+        <thead>
+		<tr>
+			<th>
+				SERVER</th>
+		  <th>
+				ID	/	EMBED	</th>
+		</tr>
+        </thead>
+        <tbody>
+		<tr>
+			<td>Google ID</td>
+	  <td>
+				<input type="text" id="google" />			</td>
+		</tr>
+		<tr>
+			<td>OpenLoad</td>
+	  <td>
+				<input type="text" id="openload" />			</td>
+		</tr>
+		<tr>
+			<td>Mirror</td>
+	  <td>
+				<input type="text" id="mirror" />			</td>
+		</tr>
+	</tbody>
+	</table>
+    <div class="poster"></div>
+    </div>
+    
+    </div>
+    <div id="hasilnya" style="display:none;">
+	<div> <button id="generate" class="btn btn-success" onclick="generate()" type="submit">Generate HTML</button> </div>
+	<fieldset readonly><textarea id="output" readonly></textarea></fieldset>
+	 </div>
+     <div id="manual" style="display:none;">
+    <h3> Copy Data Berikut dan masukkan secara manual : </h3></br>
+    <label> Judul : </label> <span id="judulnya"></span></br>
+    <label> Label : </label> <span id="genrenya"></span>
+   </div>
+	
+</body>
+</html>
