@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html><head>
+<style>
+
+label { float:right;
+right: 0px;}
+input { width: 100%}
+iframe#covervideo{position:relative;width:100%!important;height:100%!important;float: center; background:url(https://3.bp.blogspot.com/-674Dfh0wqQs/WiPWBPUwaTI/AAAAAAAADIA/6lsskgkKLrkU4w6FTyvfrODQjTd4UjifgCLcBGAs/s1600/loader.gif) center center no-repeat;background-color:#ededed;
+overflow: hidden; overflow-x: hidden; overflow-y: hidden;}
+
+#myvideo {    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 1px;
+    height: 0;}
+#myvideo iframe {    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;}
+</style>
+<script src='/js/jquery.min.js'></script>
+<link href='/css/bootstrap.min.css' rel='stylesheet' />
+<title>Goo.gl Shortern</title></head>
+<body>
+ <h1> Google Drive Player</h1>
+ <h3> Automatic Generate Player</h3>
+<table class="table table-striped table-hover table-responsive">
+<tbody>
+<tr>
+<td><label>Google Drive ID</label></td>
+<td><input type="url" id="id" required='required'/></td>
+</tr>
+<tr>
+<td><label>Poster</label></td>
+<td><input  type="text" id="poster" required='required'/></td>
+</tr>
+<tr>
+<td><label>Title</label></td>
+<td><input type="text" id="title" required='required'/></td>
+</tr>
+<tr>
+<td><label>Subtitle</label></td>
+<td><input type="text" id="sub" required='required'/></td>
+</tr>
+</tbody>
+</table>
+<button id="generate" class="btn btn-success" onclick="pendek()" type="submit">Generate Player</button>
+<div id="result" style="display:none">
+<fieldset readonly><textarea id="output" readonly></textarea></fieldset>
+<div class='myvideo' id='myvideo' name='myvideo'/>
+</div>
+<script>
+function pendek() {
+var id=$("#id").val();
+var poster=$("#poster").val();
+var title=$("#title").val();
+var entitle = encodeURIComponent(title);
+var sub=$("#sub").val();
+var query = 'id=' + id + '&poster=' + poster + '&title=' + entitle + '&sub=' + sub;
+var dequery = btoa(query);
+var link = "/player?";
+var src = link + dequery;
+var videotag = '<iframe src="' + src + '" id="covervideo" allowfullscreen="allowfullscreen"></iframe>';
+$("#result").css("display","block");
+$(videotag).appendTo("#myvideo");
+$("textarea").val('<iframe src="http://tool.indosub.me' + src + '" id="covervideo" allowfullscreen="allowfullscreen" width="640" height="360"></iframe>');
+}
+</script>
+
+</body>
+</html>
