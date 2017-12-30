@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html><head>
 <style>
-
+	#output{width:100%;
+	overflow:hidden;
+	resize: none;
+	}
 label { float:right;
 right: 0px;}
 input { width: 100%}
@@ -10,7 +13,7 @@ overflow: hidden; overflow-x: hidden; overflow-y: hidden;}
 
 #myvideo {    position: relative;
     padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 1px;
+    padding-top: 2px;
     height: 0;}
 #myvideo iframe {    position: absolute;
     top: 0;
@@ -64,6 +67,7 @@ var videotag = '<iframe src="' + src + '" id="covervideo" allowfullscreen="allow
 $("#result").css("display","block");
 $(videotag).appendTo("#myvideo");
 $("textarea").val('<iframe src="http://tool.indosub.me' + src + '" id="covervideo" allowfullscreen="allowfullscreen" width="640" height="360"></iframe>');
+document.getElementById("output").style.height=(document.getElementById("output").scrollHeight)+"px";
 }
 </script>
 
