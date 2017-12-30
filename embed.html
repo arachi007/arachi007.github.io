@@ -54,9 +54,9 @@ function pendek() {
 var id=$("#id").val();
 var poster=$("#poster").val();
 var title=$("#title").val();
-var entitle = encodeURIComponent(title);
+var enid = encodeURIComponent(id);
 var sub=$("#sub").val();
-var query = 'id=' + id + '&poster=' + poster + '&title=' + entitle + '&sub=' + sub;
+var query = 'id=' + enid + '&poster=' + poster + '&title=' + title + '&sub=' + sub;
 var dequery = btoa(query);
 var link = "/player?";
 var src = link + dequery;
