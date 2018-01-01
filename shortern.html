@@ -17,7 +17,7 @@ input { width: 100%}
 <tbody>
 <tr>
 <td><label>Original URL</label></td>
-<td><input onchange="pendek()" type="url" id="url" required='required'/></td>
+<td><input onchange="pendek()" onclick="clear()" type="url" id="url" required='required'/></td>
 </tr>
 <tr>
 <td><label>Original Shortlink</label></td>
@@ -25,7 +25,7 @@ input { width: 100%}
 </tr>
 <tr>
 <td><label>Your Safelink</label></td>
-<td><input type="url" id="safelink" required='required'/></td>
+<td><input type="url" id="safelink" readonly="readonly" disabled required='required'/></td>
 </tr>
 <tr>
 <td><label>Shortlink with Safelink</label></td>
@@ -35,6 +35,9 @@ input { width: 100%}
 </table>
 
 <script>
+ function clear() {
+  $("input").val('');
+ }
  function loadscript(filename){
             var scr=document.createElement("script");
             scr.setAttribute("type","text/javascript");
