@@ -17,26 +17,26 @@ input { width: 100%}
 <tbody>
 <tr>
 <td><label>Original URL</label></td>
-<td><input onchange="pendek()" onclick="clear()" type="url" id="url" required='required'/></td>
+<td><input class="input" onchange="pendek()" onclick="clear()" type="url" id="url" required='required'/></td>
 </tr>
 <tr>
 <td><label>Original Shortlink</label></td>
-<td><input onmouseover="this.focus();this.select()" onclick="this.focus();this.select()" readonly='readonly' type="text" id="short1" required='required'/></td>
+<td><input class="input" onmouseover="this.focus();this.select()" onclick="this.focus();this.select()" readonly='readonly' type="text" id="short1" required='required'/></td>
 </tr>
 <tr>
 <td><label>Your Safelink</label></td>
-<td><input type="url" id="safelink" readonly="readonly" disabled required='required'/></td>
+<td><input class="input" type="url" id="safelink" readonly="readonly" disabled required='required'/></td>
 </tr>
 <tr>
 <td><label>Shortlink with Safelink</label></td>
-<td><input onmouseover="this.focus();this.select()" onclick="this.focus();this.select()" readonly='readonly' type="url" id="short2" required='required'/></td>
+<td><input class="input" onmouseover="this.focus();this.select()" onclick="this.focus();this.select()" readonly='readonly' type="url" id="short2" required='required'/></td>
 </tr>
 </tbody>
 </table>
 
 <script>
  function clear() {
-  $("input").val('');
+  $(".input").val("");
  }
  function loadscript(filename){
             var scr=document.createElement("script");
