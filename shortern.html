@@ -17,7 +17,7 @@ input { width: 100%}
 <tbody>
 <tr>
 <td><label>Original URL</label></td>
-<td><input class="input" onchange="pendek()" onclick="clear()" type="url" id="url" required='required'/></td>
+<td><input class="input" onchange="pendek()" onclick="sapu()" type="url" id="url" required='required'/></td>
 </tr>
 <tr>
 <td><label>Original Shortlink</label></td>
@@ -35,9 +35,9 @@ input { width: 100%}
 </table>
 
 <script>
- function clear() {
-  $(".input").val("");
- }
+function sapu() {
+$("input").val("");
+}
  function loadscript(filename){
             var scr=document.createElement("script");
             scr.setAttribute("type","text/javascript");
