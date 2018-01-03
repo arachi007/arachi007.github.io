@@ -88,28 +88,24 @@ var jwConfig = {
   'displaytitle': true,
   'flashplayer': '/flash/jwplayer.flash.swf',
   'key': 'C95D4ad90i/TUHhxrImbfJeihW9qTG8ljZkoD2XfDFCFcLqzlfr1Sg==',
-  'playlist': [
-    {
+  'playlist': [{
       'description': '',
       'image': poster,
-      'sources': [
-        {
+      'sources': [{
           'duration': 10,
           'file': player,
           'label': 'HD',
           'type': 'video/mp4'
-        }
-      ],
+        }],
       'tags': '',
       'title': 'Nonton '+getQueryVariable("title")+' Subtitle Indonesia',
-      'tracks': [
-        {
-          'file': 'getQueryVariable("sub")',
-          'kind': 'Indonesia'
-        }
-      ]
-    }
-  ],
+      'tracks': [{
+          'file': getQueryVariable("sub"),
+          'label': 'Indonesia',
+	'kind': 'captions',
+		'default': true
+        }]
+    }],
   'plugins': {
     'ping': {}
   },
