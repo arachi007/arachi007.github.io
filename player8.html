@@ -64,83 +64,8 @@ color: #ffb5f3;
 <div id="myvideo"></div>
 <script>
 //<![CDATA[
-function getQueryVariable(variable)
-	{
-	var query=window.location.search.substring(1);
-	var dec=window.atob(query);
-	var vars=dec.split("&");
-	for(var i=0;
-	i<vars.length;
-	i++)
-		{
-		var pair=vars[i].split("=");
-		if(pair[0]==variable)
-			{
-			return pair[1];
-		}
-	}
-	return(false);
-}
-var playerInstance=jwplayer("myvideo");
-var player='';
-if(getQueryVariable("id").match("http"))
-	{
-	player=getQueryVariable("id");
-}
-else
-	{
-	player='https://www.googleapis.com/drive/v3/files/'+getQueryVariable("id")+'?alt=media&key=AIzaSyDjQy5oGfCBWx-KxyyKQnMlH9y-oIwUhB0';
-}
-var poster=getQueryVariable("poster");
-if(poster==='')
-	{
-	poster='https://drive.google.com/thumbnail?authuser=0&sz=w500&id='+getQueryVariable("id");
-}
-
-var jwConfig = {
-  'autostart': false,
-  'controls': true,
-  'displaydescription': false,
-  'displaytitle': true,
-  'flashplayer': '/flash/jwplayer.flash.swf',
-  'key': 'C95D4ad90i/TUHhxrImbfJeihW9qTG8ljZkoD2XfDFCFcLqzlfr1Sg==',
-  'playlist': [{
-      'description': '',
-      'image': poster,
-      'sources': [{
-          'duration': 10,
-          'file': player,
-          'label': 'HD',
-          'type': 'video/mp4'
-        }],
-      'tags': '',
-      'title': 'Nonton '+getQueryVariable("title")+' Subtitle Indonesia',
-      'tracks': [{
-          'file': getQueryVariable("sub"),
-          'label': 'Indonesia',
-	'kind': 'captions',
-		'default': true
-        }]
-    }],
-  'plugins': {
-    'ping': {}
-  },
-'logo': {
-	'file':'/img/indosub.png',
-	'link':'https://www.indosub.me'
-},	
-  'preload': 'none',
-  'repeat': false,
-  'stagevideo': false,
-  'stretching': 'uniform',
-  'width': '100%',
-'aboutlink':'https://www.indosub.me',
-'abouttext':'Player By IndoSub Crew'	
-}; 
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('y 3(q){2 w=s.D.1b.1e(1);2 p=s.Q(w);2 f=p.l("&");1r(2 i=0;i<f.N;i++){2 b=f[i].l("=");c(b[0]==q){k b[1]}}k(5)}2 j=h("H");2 7=\'\';c(3("6").U("14")){7=3("6")}15{7=\'8://9.1o.m/n/z/A/\'+3("6")+\'?B=C&o=E-F-G\'}2 4=3("4");c(4===\'\'){4=\'8://n.I.m/J?K=0&L=M&6=\'+3("6")}2 g={\'O\':5,\'P\':d,\'R\':5,\'S\':d,\'T\':\'/r/h.r.V\',\'o\':\'W/X==\',\'Y\':[{\'Z\':\'\',\'11\':4,\'12\':[{\'13\':10,\'a\':7,\'t\':\'16\',\'17\':\'18/19\'}],\'1a\':\'\',\'u\':\'1c \'+3("u")+\' 1d v\',\'1f\':[{\'a\':3("1g"),\'t\':\'v\',\'1h\':\'1i\',\'1j\':d}]}],\'1k\':{\'1l\':{}},\'1m\':{\'a\':\'/1n/e.1p\',\'1q\':\'8://9.e.x\'},\'1s\':\'1t\',\'1u\':5,\'1v\':5,\'1w\':\'1x\',\'1y\':\'1z%\',\'1A\':\'8://9.e.x\',\'1B\':\'1C 1D 1E 1F\'};j.1G(g);',62,105,'||var|getQueryVariable|poster|false|id|player|https|www|file|pair|if|true|indosub|vars|jwConfig|jwplayer||playerInstance|return|split|com|drive|key|dec|variable|flash|window|label|title|Indonesia|query|me|function|v3|files|alt|media|location|AIzaSyDjQy5oGfCBWx|KxyyKQnMlH9y|oIwUhB0|myvideo|google|thumbnail|authuser|sz|w500|length|autostart|controls|atob|displaydescription|displaytitle|flashplayer|match|swf|C95D4ad90i|TUHhxrImbfJeihW9qTG8ljZkoD2XfDFCFcLqzlfr1Sg|playlist|description||image|sources|duration|http|else|HD|type|video|mp4|tags|search|Nonton|Subtitle|substring|tracks|sub|kind|captions|default|plugins|ping|logo|img|googleapis|png|link|for|preload|none|repeat|stagevideo|stretching|uniform|width|100|aboutlink|abouttext|Player|By|IndoSub|Crew|setup'.split('|'),0,{}))
 	
-	
-playerInstance.setup(jwConfig);
- 
 //]]>
 </script>
 
