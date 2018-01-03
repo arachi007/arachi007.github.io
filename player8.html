@@ -72,28 +72,53 @@ if(poster==='')
 	{
 	poster='https://drive.google.com/thumbnail?authuser=0&sz=w500&id='+getQueryVariable("id");
 }
-playerInstance.setup(
-	{
-	sources:[
-		{
-		file:player,'type':'mkv/mp4','label':'Sever 1','default':'true'
-	}
-	],skin:'glow',
-  flashplayer: '/flash/jwplayer.flash.swf',
-  preload:'none',primary:'html5',autostart:'false',width:'100%',image:poster,title:'Nonton '+getQueryVariable("title")+' Subtitle Indonesia',logo:
-		{
-		file:'/img/indosub.png',link:'https://www.indosub.me'
-	},
-    displaytitle:'true',aspectratio:'16:9',aboutlink:'https://www.indosub.me',abouttext:'Player By IndoSub Crew',tracks:[
-		{
-		file:getQueryVariable("sub"),label:'Indonesia',kind:'captions',default:'true'
-	}
-	],captions:
-		{
-		color:'#FFFF00',fontSize:12,edgeStyle:'uniform',backgroundOpacity:0,
-	}
-}
-);
+
+var jwConfig = {
+  'autostart': false,
+  'controls': true,
+  'displaydescription': false,
+  'displaytitle': true,
+  'flashplayer': '/flash/jwplayer.flash.swf',
+  'key': 'C95D4ad90i/TUHhxrImbfJeihW9qTG8ljZkoD2XfDFCFcLqzlfr1Sg==',
+  'playlist': [
+    {
+      'description': '',
+      'image': poster,
+      'sources': [
+        {
+          'duration': 10,
+          'file': player,
+          'label': 'HD',
+          'type': 'video/mp4'
+        }
+      ],
+      'tags': '',
+      'title': 'Nonton '+getQueryVariable("title")+' Subtitle Indonesia',
+      'tracks': [
+        {
+          'file': 'getQueryVariable("sub")',
+          'kind': 'Indonesia'
+        }
+      ]
+    }
+  ],
+  'plugins': {
+    'ping': {}
+  },
+'logo': {
+	'file':'/img/indosub.png',
+	'link':'https://www.indosub.me'
+},	
+  'preload': 'none',
+  'repeat': false,
+  'stagevideo': false,
+  'stretching': 'uniform',
+  'width': '100%',
+'skin':'glow'	
+}; 
+	
+	
+playerInstance.setup(jwConfig);
  
 //]]>
 </script>
