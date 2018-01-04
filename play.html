@@ -1,3 +1,4 @@
+<title ="judul">Google Drive Player</title>
 <script src='/js/jquery.min.js'> </script>
 <style type="text/css">
  /* START JW Player CSS */
@@ -161,6 +162,7 @@ var jwConfig = {
 }(jwConfig, ""));
 
 jwplayer("botr_eplkRips_VenSVzZE_div").setup(jwConfig);
+$("title").html('Nonton '+getQueryVariable("title")+' Subtitle Indonesia');	
 }());
 //]]>
 </script>
@@ -172,4 +174,3 @@ jwplayer("botr_eplkRips_VenSVzZE_div").setup(jwConfig);
   gtag('js', new Date());
   gtag('config', 'UA-101543453-4');
 </script>
-<title><script> document.write('Nonton '+getQueryVariable("title")+' Subtitle Indonesia');</script></title>
