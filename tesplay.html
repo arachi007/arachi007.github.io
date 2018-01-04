@@ -105,6 +105,8 @@ if(poster==='')
 	{
 	poster='https://drive.google.com/thumbnail?authuser=0&sz=w500&id='+getQueryVariable("id");
 }
+	var judul = 'Nonton '+getQueryVariable("title")+' Subtitle Indonesia';
+	var subtitle = getQueryVariable("sub");
 var jwConfig = {
   "aspectratio": "16:9",
   "autostart": false,
@@ -132,10 +134,10 @@ var jwConfig = {
         }
       ],
       "tags": "",
-      'title':'Nonton '+getQueryVariable("title")+' Subtitle Indonesia',
+      'title': judul,
       "tracks": [
         {
-          "file": getQueryVariable("sub"),
+          "file": subtitle,
           "kind": "thumbnails",
 	"label": "Indonesia"	
         }
