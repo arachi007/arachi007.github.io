@@ -160,9 +160,12 @@ var jwConfig = {
 (function(playerConfig, testConfig) {
 
 }(jwConfig, ""));
-
-jwplayer("botr_eplkRips_VenSVzZE_div").setup(jwConfig);
-$("title").html('Nonton '+getQueryVariable("title")+' Subtitle Indonesia');	
+var player = jwplayer("botr_eplkRips_VenSVzZE_div");
+player.setup(jwConfig);
+$("title").html('Nonton '+getQueryVariable("title")+' Subtitle Indonesia');
+player.onError(function(error){
+$("#ketiga").click();
+});	
 }());
 //]]>
 </script>
