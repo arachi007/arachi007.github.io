@@ -122,17 +122,14 @@ if(poster==='')
 }
 playerInstance.setup(
   {playlist:[
-    {
-     image:poster, 
+    { file:'/video/opening.mp4',
 	sources:[
 		{
-		file:'/video/opening.mp4','type':'mkv/mp4','label':'Opening'
-	},{
 		file:player,'type':'mkv/mp4','label':'Sever 1'
 	}
 	]
   }
-  ],flashplayer:'/flash/jwplayer.flash.swf',skin:'glow',preload:'none',primary:'flash',autostart:'false',width:'100%',title:'Nonton '+getQueryVariable("title")+' Subtitle Indonesia',logo:
+  ],flashplayer:'/flash/jwplayer.flash.swf',image:poster,skin:'glow',preload:'none',primary:'flash',autostart:'false',width:'100%',title:'Nonton '+getQueryVariable("title")+' Subtitle Indonesia',logo:
 		{
 		file:'/img/indosub.png',link:'https://www.indosub.me'
 	},
