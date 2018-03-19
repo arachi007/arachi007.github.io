@@ -162,37 +162,44 @@ playerInstance.setup(
 'flashplayer':'/flash/jwplayer.flash.swf',
 'playbackRateControls':true,
 'playlist':[
-							{
-		'description':'',
-		'image':poster,
-		'sources':[
-								{
-				'file':player,
-				'label':'HD',
-				'type':'video/mp4'
-								}
-							],
+{
+	'description':'',
+	'image':poster,
+	'sources':[
+	{
+	'file':player,
+	'label':'HD',
+	'type':'video/mp4'
+	}
+	],
      'tags':'',
      'title':'Nonton '+getQueryVariable("title")+' Subtitle Indonesia',
      'tracks':[
-								{
-			'file':getQueryVariable("sub"),
+	{
+	'file':getQueryVariable("sub"),
       'label':'Indonesia',
       'kind':'captions',
       'default':true
-								}
-							]
-							}
-					],
+	}
+	]
+	}
+	],
+'advertising': {
+			'client': 'vast',
+			'tag': 'xml/ads1.xml',
+			'rules': {
+				'startOn': 5,
+				'frequency': 1
+			}
+		}		
     'plugins':
-							{
-						'ping':
-										{
-										}
-							},
+	{
+'ping':
+	{}
+	},
     'logo':
-						{
-		'file':'/img/dewamovie21-small-colour.png',
+	{
+'file':'/img/dewamovie21-small-colour.png',
     'link':'https://dewamovie21.tech'
 	},
     'preload':'none',
