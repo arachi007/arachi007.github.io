@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html><head>
+<script src='/js/jquery.min.js'></script>
+<link href='/css/bootstrap3.min.css' rel='stylesheet' />
+<title>Goo.gl Shortern</title></head>
+<style>
+ body{ width: 90%; height: 90%; margin-left:5%; margin-top:30px}
+label { float:right;
+right: 0px;}
+input, select { width: 100%}
+ h1, h3 { text-align:center}
+</style>
+<body>
+ <h1> Google Shortlink Tools</h1>
+ <h3> Automatic Generate goo.gl</h3>
+<table class="table table-striped table-hover table-responsive">
+<tbody>
+<tr>
+<td><label>Server Shortern</label></td>
+<td>
+<select onchange="pendek()" class="form-control" id="server">
+<option value="googl"> Goo.gl
+<option value="tinyurl"> Tinyurl.com
+<option value="safemn"> Safe.mn
+<option value="isgd"> Is.gd
+<option value="vgd"> V.gd
+<option value="mcafee"> Mcaf.ee
+<option value="linkee"> Linkee.com
+<option value="cligs"> Cli.gs
+<option value="tinyurlms"> Tinyurl.ms
+<option value="metamarknet"> Metamark.net
+<option value="shorturl"> Shorturl.com
+<option value="snipurl"> Snipurl.com
+</select>
+</td>
+</tr>
+<tr>
+<td><label>Original URL</label></td>
+<td><input class="input form-control" onchange="pendek()" onclick="sapu()" type="url" id="url" required='required'/></td>
+</tr>
+<tr>
+<td><label>Original Shortlink</label></td>
+<td><input class="input form-control" onmouseover="this.focus();this.select()" onclick="this.focus();this.select()" readonly='readonly' type="text" id="short1" required='required'/></td>
+</tr>
+<tr>
+<td><label>Your Safelink</label></td>
+<td><input class="input form-control" type="url" id="safelink" readonly="readonly" disabled required='required'/></td>
+</tr>
+<tr>
+<td><label>Shortlink with Safelink</label></td>
+<td><input class="input form-control" onmouseover="this.focus();this.select()" onclick="this.focus();this.select()" readonly='readonly' type="url" id="short2" required='required'/></td>
+</tr>
+</tbody>
+</table>
+
+<script>
+ function sapu() {		
+ $("input").val("");		
+ }
+ function loadscript(filename){
+            var scr=document.createElement("script");
+            scr.setAttribute("type","text/javascript");
+            scr.setAttribute("src", filename);
+            scr.setAttribute("defer", "defer");
+            document.getElementsByTagName("head")[0].appendChild(scr);
+          }
+  function urlShortLagi(response) {
+if(response.tinyurl && response.tinyurl!="")
+document.getElementById("short2").value=response.tinyurl;
+}
+ function shortlink(){
+ var server = $("#server").val();
+ var url=$("#safelink").val();
+var enurl = encodeURIComponent(url);
+var googl = "https://urltinyfy.appspot.com/"+ server +"?unify=1&url=";
+var scr = googl + enurl;
+loadscript(scr + "&callback=urlShortLagi");
+ }
+function safelink(responnya) {
+document.getElementById("safelink").value='https://tool.indosub.me/url?'+ btoa(responnya) + '';
+shortlink(); 
+}
+ function urlShort(response) {
+ if(response.ok == true) {
+if(response.tinyurl && response.tinyurl!="")
+document.getElementById("short1").value=response.tinyurl;
+var result = response.tinyurl;
+safelink(result);
+} else {
+alert ("Server ini sedang main tenis");
+}
+}
+function pendek() {
+var url=$("#url").val();
+ var server = $("#server").val();
+var enurl = encodeURIComponent(url);
+var googl = "https://urltinyfy.appspot.com/"+ server + "?unify=1&url=";
+var scr = googl + enurl;
+loadscript(scr + "&callback=urlShort");
+}
+</script>
+
+</body>
+</html>
