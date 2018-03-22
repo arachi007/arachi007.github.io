@@ -1,6 +1,6 @@
 <title>Short URL</title>
 <script src='/js/jquery.min.js'> </script>
-<div id="url"></div>
+<a href="" id="urlmain"><div id="url"></div></a>
 <script>
 function getQueryVariable(variable)
 	{
@@ -20,4 +20,5 @@ function getQueryVariable(variable)
 	return(false)
 }
 document.getElementById("url").innerHTML = getQueryVariable("url");
+	$("#urlmain").attr("href", "getQueryVariable("url"));
 </script>
