@@ -28,16 +28,6 @@ Link Decryption Done and Redirecting you on <span id="countdowntimer">10 </span>
 <div id="circularG_8" class="circularG">
 </div>
 </div>
-<script type="text/javascript">
-    var timeleft = 10;
-    var downloadTimer = setInterval(function(){
-    timeleft--;
-    document.getElementById("countdowntimer").textContent = timeleft;
-    if(timeleft <= 0){
-        clearInterval(downloadTimer);
-   }
-    },1000);
-</script> 
 <script>
 function getQueryVariable(variable)
 	{
@@ -58,4 +48,13 @@ function getQueryVariable(variable)
 }
 document.getElementById("url").innerHTML = getQueryVariable("url");
 	$("#urlmain").attr("href", getQueryVariable("url"));
-</script>
+    var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+	    window.location.href = getQueryVariable("url");
+   }
+    },1000);
+</script> 
