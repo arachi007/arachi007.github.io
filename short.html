@@ -77,7 +77,7 @@ var scr = googl + enurl;
 loadscript(scr + "&callback=urlShortLagi");
  }
 function safelink(responnya) {
-document.getElementById("safelink").value='https://tool.indosub.me/url?'+ btoa(responnya) + '';
+document.getElementById("safelink").value='https://tool.indosub.me/url?'+ btoa('url=' +responnya) + '';
 shortlink(); 
 }
  function urlShort(response) {
