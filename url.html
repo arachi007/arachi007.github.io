@@ -5,7 +5,7 @@
 </style>
 <!-- you can add popup ads -->
 <div class="redirect">
-Link Decryption Done and Redirecting you on <span id="countdowntimer">5 </span> seconds to:
+Link Decryption Done and Click The Link Below:
 </div>
 <div class="redirect_url">
 <a href="" id="urlmain"><div id="url"></div></a>
@@ -54,7 +54,6 @@ document.getElementById("url").innerHTML = getQueryVariable("url");
     document.getElementById("countdowntimer").textContent = timeleft;
     if(timeleft <= 0){
         clearInterval(downloadTimer);
-	    window.location.href = getQueryVariable("url");
    }
     },1000);
 </script> 
