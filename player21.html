@@ -163,15 +163,7 @@ playerInstance.setup(
 		{
 		'description':'','image':poster,'sources':[
 			{
-			'file':player,'label':'HD','type':'video/mp4'
-		}
-		],'tags':'','title':'Nonton '+getQueryVariable("title")+' Subtitle Indonesia','tracks':[
-			{
-			'file':getQueryVariable("sub"),'label':'Indonesia','kind':'captions','default':true
-		}
-		]
-	}
-	],'advertising':
+			'file':player,'label':'HD','type':'video/mp4','advertising':
 		{
 		'client':'vast',"vpaidmode": "insecure",
       schedule: {
@@ -180,7 +172,15 @@ playerInstance.setup(
 				'tag':'/xml/vast-30s-ad.xml'
 			},
 		}
-	},'plugins':
+	}
+		}
+		],'tags':'','title':'Nonton '+getQueryVariable("title")+' Subtitle Indonesia','tracks':[
+			{
+			'file':getQueryVariable("sub"),'label':'Indonesia','kind':'captions','default':true
+		}
+		]
+	}
+	],'plugins':
 		{
 		'ping':
 			{
