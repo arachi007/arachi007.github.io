@@ -137,21 +137,6 @@ player.on('error', function() {
   });
   player.play();
 });
-
-// Also load custom video file on buffer
-player.on('buffer', function() {
-  theTimeout = setTimeout(function() {
-    player.load({
-      file:"/video/failed2.mp4",
-      image:"/img/failed.jpg"
-    });
-    player.play();
-  }, 5000);
-});
-
-player.on('play', function() {
-  clearTimeout(theTimeout);
-});
  //]]>
 </script>
 
