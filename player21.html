@@ -132,7 +132,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 // Load custom video file on error
 player.on('error', function() {
   player.load({
-    file:"/video/failed.mp4",
+    file:"/video/failed2.mp4",
     image:"/img/failed.jpg"
   });
   player.play();
@@ -142,7 +142,7 @@ player.on('error', function() {
 player.on('buffer', function() {
   theTimeout = setTimeout(function() {
     player.load({
-      file:"/video/failed.mp4",
+      file:"/video/failed2.mp4",
       image:"/img/failed.jpg"
     });
     player.play();
